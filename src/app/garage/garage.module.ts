@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GarageComponent } from './garage-component/garage-component.component';
 import { GarageRoutingModule } from './garage-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -11,7 +12,8 @@ import { GarageRoutingModule } from './garage-routing.module';
   ],
   imports: [
     CommonModule,
-    GarageRoutingModule
+    GarageRoutingModule,
+    HttpClientModule
   ]
 })
 export class GarageModule { }

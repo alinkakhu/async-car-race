@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GarageRoutingModule } from './garage/garage-routing.module';
@@ -17,8 +17,8 @@ import { HeaderComponent } from './header/header.component';
     BrowserModule,
     AppRoutingModule,
     GarageRoutingModule,
-    WinnersRoutingModule
-
+    WinnersRoutingModule,
+HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

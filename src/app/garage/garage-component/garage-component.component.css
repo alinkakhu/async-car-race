@@ -1,5 +1,11 @@
-button{
-    display: block;
-    width: 100px;
-    margin: 2rem;
+button {
+  width: 150px;
+  margin-right: 1rem;
+}
+ul {
+  display: flex;
+  list-style: none;
+}
+.container{
+    padding-top: 40px;
 }

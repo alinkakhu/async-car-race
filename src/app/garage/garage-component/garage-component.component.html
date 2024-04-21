@@ -1,1 +1,24 @@
- <h1>garage</h1>
+<div class="container">
+  <ul>
+    <li><button class="btn btn-outline-primary">Generate cars</button></li>
+    <li><button class="btn btn-info">Race</button></li>
+    <li><button class="btn btn-danger">Reset</button></li>
+  </ul>
+  <div *ngFor="let item of data">{{ item.name }} - {{ item.color }}</div>
+
+  <div *ngIf="pagination.totalItems > pagination.limit">
+    <button class="btn"
+      (click)="onPageChange(pagination.page - 1)"
+      [disabled]="pagination.page === 1"
+    >
+      Previous
+    </button>
+    <span>{{ pagination.page }} / {{ totalPages() }}</span>
+    <button class="btn"
+      (click)="onPageChange(pagination.page + 1)"
+      [disabled]="pagination.page * pagination.limit >= pagination.totalItems"
+    >
+      Next
+    </button>
+  </div>
+</div>

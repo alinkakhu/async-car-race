@@ -1,7 +1,14 @@
 li {
   list-style: none;
 }
+ul{
+  display: flex;
+  gap: 1rem;
+}
 button {
-  margin: 1rem;
+
   width: 100px;
+}
+header{
+  padding-top: 2rem;
 }
