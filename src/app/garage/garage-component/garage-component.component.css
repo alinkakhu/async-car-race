@@ -5,7 +5,15 @@ button {
 ul {
   display: flex;
   list-style: none;
+
 }
 .container{
     padding-top: 40px;
+}
+
+li{
+    list-style: none;
+}
+.pagination{
+    padding-top: 50px;
 }

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { GarageRoutingModule } from './garage/garage-routing.module';
 import { WinnersRoutingModule } from './winners/winners-routing.module';
 import { HeaderComponent } from './header/header.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { HeaderComponent } from './header/header.component';
     AppRoutingModule,
     GarageRoutingModule,
     WinnersRoutingModule,
-HttpClientModule
+    HttpClientModule,
+BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

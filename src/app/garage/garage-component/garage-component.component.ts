@@ -10,7 +10,7 @@ import { ApiService } from 'src/app/shared/services/api.service';
   providedIn: 'root',
 })
 export class GarageComponent implements OnInit {
-  data: any[] = [];
+  data: any[] | null = [];
   pagination: {
     page: number;
     limit: number;
@@ -20,7 +20,7 @@ export class GarageComponent implements OnInit {
     limit: 7,
     totalItems: 0,
   };
-
+  engineState: { [key: number]: boolean } = {};
   constructor(private api: ApiService) {}
 
   ngOnInit(): void {
@@ -43,4 +43,16 @@ export class GarageComponent implements OnInit {
   totalPages(): number {
     return Math.ceil(this.pagination.totalItems / this.pagination.limit);
   }
+  generateRandomCarsOnCLick(): any {
+    console.log('cl');
+    const cars: any = [];
+    for (let i = 0; i < 100; i++) {
+      this.api.createRandomCars().subscribe((response) => {
+        this.loadData();
+        console.log(response);
+      });
+    }
+  }
+
+   
 }
