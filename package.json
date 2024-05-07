@@ -7,7 +7,8 @@
     "start": "webpack serve --config ./webpack.config.js --env mode=dev",
     "build": "webpack --config ./webpack.config.js --env mode=prod",
     "lint": "eslint . --ext .ts",
-    "format": "prettier --write \"**/*.ts\""
+    "format": "prettier --write \"**/*.ts\"" 
+
   },
   "keywords": [],
   "devDependencies": {
