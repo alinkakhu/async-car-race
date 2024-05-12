@@ -1,4 +1,4 @@
-import Component from '@core/templates/component';
+import Component from '../../templates/component';
 
 class Main extends Component {
   renderMain() {
@@ -12,7 +12,7 @@ class Main extends Component {
     return this.container;
   }
 
-  render() {
+  override render() {
     this.renderMain();
     return this.container;
   }

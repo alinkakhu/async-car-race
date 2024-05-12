@@ -1,8 +1,9 @@
-import { ICar } from '@core/ts/interfaces';
-import { Endpoint } from '@core/ts/enum';
-import type { TGetCars } from '@core/ts/types';
+import { ICar } from '../core/ts/interfaces';
+import { Endpoint } from '../core/ts/enum';
+import type { TGetCars } from '../core/ts/types';
 
 const BASE = 'https://time-charming-lan.glitch.me';
+
 const enum Methods {
   GET = 'GET',
   POST = 'POST',

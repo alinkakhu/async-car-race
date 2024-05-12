@@ -1,7 +1,7 @@
-import Page from '@core/templates/page';
-import Database from '@db/index';
-import { Garage } from '@core/components';
-import { DefaultConst, Endpoint, Pagination } from '@core/ts/enum';
+import Page from '../../core/templates/page';
+import Database from '../../db/index';
+import { Garage } from '../../core/components';
+import { DefaultConst, Endpoint, Pagination } from '../../core/ts/enum';
 
 class GaragePage extends Page {
   async getCars(): Promise<HTMLElement> {
@@ -13,7 +13,7 @@ class GaragePage extends Page {
     return result;
   }
 
-  async render(): Promise<HTMLElement> {
+  override async render(): Promise<HTMLElement> {
     this.container.append(await this.getCars());
     return this.container;
   }

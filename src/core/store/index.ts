@@ -1,5 +1,5 @@
-import type { ICar } from '@core/ts/interfaces';
-import EventObserver from '@core/eventObserver';
+import type { ICar } from '../ts/interfaces';
+import EventObserver from '../eventObserver';
 
 interface IStateCar {
   id: number;

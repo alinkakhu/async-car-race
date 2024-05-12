@@ -14,7 +14,7 @@ interface IStateCar {
   time: number;
 }
 
-
+// ToDo разделить в разные файлы
 class Garage extends Component {
   data: TGetCars;
   event: EventObserver<unknown>;
@@ -213,7 +213,7 @@ class Garage extends Component {
     }
   }
 
-
+  // eslint-disable-next-line max-lines-per-function
   async raceAllCar(cars: ICar[]) {
     let isNotFinished = true;
     this.toggleRaceResetButtons('all');

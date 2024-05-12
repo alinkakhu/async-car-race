@@ -1,6 +1,6 @@
-import Store from '@core/store';
-import Component from '@core/templates/component';
-import { PageIds } from '@core/ts/enum';
+import Store from '../../store';
+import Component from '../../templates/component';
+import { PageIds } from '../../ts/enum';
 
 const Buttons = [
   {
@@ -33,7 +33,7 @@ class Header extends Component {
     });
   }
 
-  render() {
+  override render() {
     this.renderNavButtons();
     return this.container;
   }

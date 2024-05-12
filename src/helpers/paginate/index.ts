@@ -1,4 +1,4 @@
-import { IPaginationGenerator } from '@core/ts/interfaces';
+import { IPaginationGenerator } from '../../core/ts/interfaces';
 
 type TRange = {
   start: number;
@@ -64,7 +64,7 @@ class PaginationGenerator implements IPaginationGenerator {
     const lastPage: string | number = pages[pages.length - 1];
 
     if (pages[0] !== 1) pages = withDots(1, [1, '...']).concat(pages);
-    if (lastPage && lastPage < this.pageCount) pages = pages.concat(withDots(this.pageCount, ['...', this.pageCount]));
+    if (lastPage && Number(lastPage) < this.pageCount) pages = pages.concat(withDots(this.pageCount, ['...', this.pageCount]));
     return pages;
   };
 }

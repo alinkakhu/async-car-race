@@ -150,7 +150,7 @@ class GeneratorCar extends Component {
     this.container.append(create, update, buttons);
   }
 
-  render() {
+  override render() {
     this.appendAll();
     return this.container;
   }

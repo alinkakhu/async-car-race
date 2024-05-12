@@ -3,7 +3,8 @@ import Component from '@core/templates/component';
 import EventObserver from '@core/eventObserver';
 import Database from '@db/index';
 import Store from '@core/store';
-import finish from '@assets/images/finish-flag.png';
+// import finish from '@assets/images/finish-flag.svg';
+// import finish from '../../../../assets/images/finish-flag.svg';
 import getCarImage from '@helpers/getCarImage';
 import { Event } from '@core/ts/enum';
 
@@ -124,9 +125,13 @@ class Car extends Component {
     car.classList.add('car__model');
     car.innerHTML = imgSvg;
 
+    // const finishLine = document.createElement('img');
+    // finishLine.classList.add('car__finish-line');
+    // finishLine.src = finish;
+
     const finishLine = document.createElement('img');
     finishLine.classList.add('car__finish-line');
-    finishLine.src = finish;
+    finishLine.setAttribute('src', '../../../../assets/images/finish-flag.svg');
 
     Store.addToStore(`carModel${id}`, car);
     Store.addToStore(`carFinishLine${id}`, finishLine);

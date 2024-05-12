@@ -1,5 +1,5 @@
-import Page from '@core/templates/page';
-import { ErrorTypes } from '@core/ts/enum';
+import Page from '../../core/templates/page';
+import { ErrorTypes } from '../../core/ts/enum';
 
 class ErrorPage extends Page {
   private errorType: ErrorTypes | string;
@@ -35,7 +35,7 @@ class ErrorPage extends Page {
     this.container.append(wrapper);
   }
 
-  async render(): Promise<HTMLElement> {
+  override async render(): Promise<HTMLElement> {
     this.generateBodyContent();
     return this.container;
   }

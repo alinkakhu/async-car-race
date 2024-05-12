@@ -1,8 +1,8 @@
-import Page from '@core/templates/page';
-import { ErrorTypes, Event, PageIds } from '@core/ts/enum';
-import { Main, Header } from '@core/layouts';
-import { GaragePage, WinnersPage, ErrorPage } from '@pages/index';
-import Store from '@core/store';
+import Page from '../core/templates/page';
+import { ErrorTypes, Event, PageIds } from '../core/ts/enum';
+import { Main, Header } from '../core/layouts';
+import { GaragePage, WinnersPage, ErrorPage } from '../pages/index';
+import Store from '../core/store';
 
 class App {
   private static body: HTMLElement = document.body;

@@ -1,9 +1,9 @@
-import { TGetCars } from '@core/ts/types';
-import Database from '@db/index';
-import PaginationGenerator from '@helpers/paginate';
-import { DefaultConst, Endpoint, Event, Pagination } from '@core/ts/enum';
-import Store from '@core/store';
-import { IPaginationGenerator } from '@core/ts/interfaces';
+import { TGetCars } from '../ts/types';
+import Database from '../../db/index';
+import PaginationGenerator from '../../helpers/paginate';
+import { DefaultConst, Endpoint, Event, Pagination } from '../ts/enum';
+import Store from '../store';
+import { IPaginationGenerator } from '../ts/interfaces';
 
 class Component {
   protected container: HTMLElement;
@@ -44,7 +44,7 @@ class Component {
     }
     if (!data) throw new Error('Data is undefined');
     const pages = Math.ceil(Number(data.total) / maxPage);
-    const pagination: IPaginationGenerator = new PaginationGenerator(currentPage, pages);
+    const pagination: IPaginationGenerator = new PaginationGenerator(Number(currentPage), pages);
     const pagesArray: (string | number)[] = pagination.generate();
 
     pagesArray.map((pageItem) => {
